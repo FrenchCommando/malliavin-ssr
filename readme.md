@@ -303,13 +303,12 @@ $$
 
 ### Functional
 
-$$\phi = `ATM \  Option` $$
+$$\phi = " ATM \  Option " $$
 
 $$
 \mathbb{E}\left[
 D_s^S \phi
-\right]
-=
+\right] =
 \mathbb{E}\left[
 \mathbb{1}_{\{S_t > S_0\}}
 \mathbb{1}_{\{s \in [0,t]\}}
@@ -320,8 +319,7 @@ $$
 $$
 \mathbb{E}\left[
 D_s^X \phi
-\right]
-=
+\right] =
 \mathbb{E}\left[
 \mathbb{1}_{\{S_t > S_0\}}
 \mathbb{1}_{\{s \in [0,t]\}}
@@ -332,8 +330,7 @@ $$
 $$
 \mathbb{E}\left[
 D_s^Y \phi
-\right]
-=
+\right] =
 \mathbb{E}\left[
 \mathbb{1}_{\{S_t > S_0\}}
 \mathbb{1}_{\{s \in [0,t]\}}
