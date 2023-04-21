@@ -250,13 +250,13 @@ However, we realized that we don't need to manipulate the uncorrelated brownian 
 
 $$
 \begin{cases}
-dD_s^SS_t
+dD_s^S S_t
 = & 
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^S_s S_t dW_t^S 
 \\
-D_s^SS_s=S_s a_s l(s,S_s)
+D_s^SS_s = & S_s a_s l(s,S_s)
 \end{cases}
 $$
 
