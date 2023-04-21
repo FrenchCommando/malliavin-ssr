@@ -251,7 +251,7 @@ However, we realized that we don't need to manipulate the uncorrelated brownian 
 $$
 \begin{cases}
 dD_s^SS_t
-=  \ 
+=  
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^S_s S_t dW_t^S 
@@ -265,7 +265,7 @@ $$
 \begin{cases}
     \begin{aligned}
 dD_s^XS_t
-= & \ 
+= & 
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^X_s S_t dW_t^S \\
@@ -285,7 +285,7 @@ $$
 \begin{cases}
     \begin{aligned}
 dD_s^Y S_t
-= & \ 
+= & 
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^Y_s S_t dW_t^S \\
@@ -303,7 +303,7 @@ $$
 
 ### Functional
 
-$$\phi = " ATM \  Option " $$
+$$\phi = ATM \  Option $$
 
 $$
 \mathbb{E}\left[
@@ -312,7 +312,7 @@ D_s^S \phi
 \mathbb{E}\left[
 \mathbb{1}_{\{S_t > S_0\}}
 \mathbb{1}_{\{s \in [0,t]\}}
-(\frac{D_s^S S_t}{a_0 l(0,S_0)} - S_t)
+\left(\frac{D_s^S S_t}{a_0 l(0,S_0)} - S_t \right)
 \right]
 $$
 
