@@ -21,8 +21,8 @@ $$\sigma(t,s)= \min(\sigma_{\max}, \max(\sigma_{\min}, \sigma_0+\alpha(t)x))$$
 
 $$\alpha(t)= 
 \begin{cases}
-\alpha_0 & \mathrm{if} \; t \leq \tau_0\\
-\alpha_0 \left( \frac{\tau_0}{t} \right)^\gamma& \mathrm{if} \; t > \tau_0
+\alpha_0 & \mathrm{if} \  t \leq \tau_0\\
+\alpha_0 \left( \frac{\tau_0}{t} \right)^\gamma& \mathrm{if} \  t > \tau_0
 \end{cases}
 $$
 
@@ -87,7 +87,7 @@ $$\omega=2\nu$$
 
 Spot diffusion
 
-$$dS_t=S_t\sqrt{\xi_t^t} \; dW_t^S$$
+$$dS_t=S_t\sqrt{\xi_t^t} \  dW_t^S$$
 
 
 Correlations - Brownian increments
@@ -140,7 +140,7 @@ Model smile is fitted to local volatility.
 
 $$\mathcal{R}_T = 
 \frac{1}{\mathcal{S}_T}
-\frac{\mathbb{E}\left[ \mathrm{d} \ln S \;\mathrm{d} \hat{\sigma}_{F_T(S)\;T}\right]}{\mathbb{E}\left[ (\mathrm{d} \ln S)^2 \right]}
+\frac{\mathbb{E}\left[ \mathrm{d} \ln S \ \mathrm{d} \hat{\sigma}_{F_T(S)\ T}\right]}{\mathbb{E}\left[ (\mathrm{d} \ln S)^2 \right]}
 $$
 
 This will be eveluated numerically using MonteCarlo methods described in the next section.
@@ -184,13 +184,10 @@ Reuse the derivatives for SSR.
 $(12.56)$
 
 $$
-\mathrm{d}\hat{\sigma}_{F_T(S)\;T}
-=
-\frac{\mathrm{d}\hat{\sigma}_{F_T(S)\;T}}{\mathrm{d} \ln S} \mathrm{d}\ln S
-+
-\frac{\mathrm{d}\hat{\sigma}_{F_T(S)\;T}}{\mathrm{d} X} \mathrm{d}X
-+
-\frac{\mathrm{d}\hat{\sigma}_{F_T(S)\;T}}{\mathrm{d} Y} \mathrm{d}Y
+\mathrm{d}\hat{\sigma}_{F_T(S) \ T}=
+\frac{\mathrm{d}\hat{\sigma}_{F_T(S) \ T}}{\mathrm{d} \ln S} \mathrm{d}\ln S +
+\frac{\mathrm{d}\hat{\sigma}_{F_T(S) \ T}}{\mathrm{d} X} \mathrm{d}X +
+\frac{\mathrm{d}\hat{\sigma}_{F_T(S) \ T}}{\mathrm{d} Y} \mathrm{d}Y
 $$
 
 $$\mathbb{E}\left[d \ln S^2\right] = \sigma_0^2 dt$$
@@ -206,9 +203,9 @@ $$\mathbb{E}\left[    dX^2\right]= dt$$
 $$\mathbb{E}\left[    dY^2\right]= dt$$
 
 $$
-vol\left(\hat{\sigma}_{F_T(S)\;T}\right)  = 
+vol\left(\hat{\sigma}_{F_T(S)\ T}\right)  = 
 \sqrt{
-\frac{\langle d \hat{\sigma}_{F_T(S)\;T} , d \hat{\sigma}_{F_T(S)\;T} \rangle}{\hat{\sigma}_{F_T(S)\;T}^2 dt}
+\frac{\langle d \hat{\sigma}_{F_T(S)\ T} , d \hat{\sigma}_{F_T(S)\ T} \rangle}{\hat{\sigma}_{F_T(S)\ T}^2 dt}
 }
 $$
 
@@ -220,8 +217,8 @@ $$\mathcal{R}_T =
 \frac{1}{\mathcal{S}_T}
 \frac{1}{\sigma_0}
 \left(\frac{
-    \hat{\sigma}_{F_T(S)\;T}(\ln S_0 + \epsilon \sigma_0, X_0 + \epsilon \rho_{SX}, Y_0 + \epsilon \rho_{SY}) 
-    - \hat{\sigma}_{F_T(S)\;T} (\ln S_0, X_0,Y_0)
+    \hat{\sigma}_{F_T(S)\ T}(\ln S_0 + \epsilon \sigma_0, X_0 + \epsilon \rho_{SX}, Y_0 + \epsilon \rho_{SY}) 
+    - \hat{\sigma}_{F_T(S)\ T} (\ln S_0, X_0,Y_0)
     }{\epsilon}\right)
 $$
 
@@ -254,7 +251,7 @@ However, we realized that we don't need to manipulate the uncorrelated brownian 
 $$
 \begin{cases}
 dD_s^SS_t
-=  \;
+=  \ 
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^S_s S_t dW_t^S 
@@ -268,7 +265,7 @@ $$
 \begin{cases}
     \begin{aligned}
 dD_s^XS_t
-= & \;
+= & \ 
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^X_s S_t dW_t^S \\
@@ -288,7 +285,7 @@ $$
 \begin{cases}
     \begin{aligned}
 dD_s^Y S_t
-= & \;
+= & \ 
 a_t
 (l(t, S_t) + S_T \partial_S l(t,S_t))
 D^Y_s S_t dW_t^S \\
@@ -306,7 +303,7 @@ $$
 
 ### Functional
 
-$$\phi = "ATM \; Option"$$
+$$\phi = `ATM \  Option` $$
 
 $$
 \mathbb{E}\left[
@@ -346,17 +343,11 @@ $$
 
 ### Sensitivities
 
-$$\partial_S \hat{\sigma} = 
-\frac{\mathbb{E}\left[D_s^S\phi\right]}
-{Vega(\hat{\sigma})}$$
+$$\partial_S \hat{\sigma} = \frac{\mathbb{E}\left[D_s^S\phi\right]}{Vega(\hat{\sigma})}$$
 
-$$\partial_X \hat{\sigma} = 
-\frac{\mathbb{E}\left[D_s^X\phi\right]}
-{Vega(\hat{\sigma})}$$
+$$\partial_X \hat{\sigma} = \frac{\mathbb{E}\left[D_s^X\phi\right]}{Vega(\hat{\sigma})}$$
 
-$$\partial_Y \hat{\sigma} = 
-\frac{\mathbb{E}\left[D_s^Y\phi\right]}
-{Vega(\hat{\sigma})}$$
+$$\partial_Y \hat{\sigma} = \frac{\mathbb{E}\left[D_s^Y\phi\right]}{Vega(\hat{\sigma})}$$
 
 
 We use these sensitivities to evaluate the ATM Volatility of Volatility and the Skew-Stickiness-Ratio.
